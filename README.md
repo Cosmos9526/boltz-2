@@ -1,7 +1,7 @@
-# Boltz-2
+# Boltz-2-docker-api
 
 ## Running the Docker Container
-To start the AlphaFold_B API, first pull the necessary image and run the Docker container using the following command:
+To start the  Boltz-2 API, first pull the necessary image and run the Docker container using the following command:
 
 ```bash
 docker run --gpus all --privileged --shm-size=32G  --user root -v /home/dgx/0MMilad/vvv:/workspace/output/ -p 8002:8000 cosmos9526/alphafold:tagname
