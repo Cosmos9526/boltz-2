@@ -4,7 +4,7 @@
 To start the AlphaFold_B API, first pull the necessary image and run the Docker container using the following command:
 
 ```bash
-docker run --gpus all --shm-size=16G -d --user root -v ./output/:/workspace/output/ -p 8002:8000 alphafold_b:latest
+docker run --gpus all --privileged --shm-size=32G  --user root -v /home/dgx/0MMilad/vvv:/workspace/output/ -p 8002:8000 cosmos9526/alphafold:tagname
 ```
 
 ### Notes:
@@ -30,16 +30,6 @@ The API is built using **FastAPI** and runs on port `8002`. It provides a sequen
 }
 ```
 
-#### Example Response:
-```json
-{
-    "success": true,
-    "output_path": "./output/boltz_results_seq_model_0.pdb",
-    "stdout": "...",
-    "stderr": ""
-}
-```
-
 ### Example Python Code for Sending a Request
 ```python
 import requests
@@ -54,7 +44,7 @@ response = requests.post(url, json=data)
 print("Response:", response.json())
 ```
 
-#### Example Output
+#### Example terminal Output
 ```json
 {
     "success": true,
