@@ -1,4 +1,4 @@
-# AlphaFold_B API
+# Boltz-2
 
 ## Running the Docker Container
 To start the AlphaFold_B API, first pull the necessary image and run the Docker container using the following command:
